@@ -23,10 +23,11 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // inicia el formulario con un primer bloque de estudios
     this.agregarEstudio();
   }
 
-  // Getter para acceder al FormArray de estudios
+  // Getter para acceder al FormArray de estudios, (recomendable para simplificar la referencia en el template)
   get estudios(): FormArray {
     return this.cvForm.get('estudios') as FormArray;
   }
